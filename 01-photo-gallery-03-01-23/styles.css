@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: grey;
+  background: #dde2e9;
+}
+
+.container {
+  background: white;
+  border-radius: 2rem;
+  margin: 10vmin;
+  box-shadow: 1px 1px 20px #c3ced8;
+}
+
+nav {
+  padding: 4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li:hover:after {
+  content: "";
+  width: 50%;
+  height: 0.15rem;
+  background: grey;
+  position: absolute;
+  bottom: -15%;
+  right: 25%;
+}
+
+main {
+  padding: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow: hidden;
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+button {
+  background: #2e3336;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2.5rem;
+  box-shadow: 1px 2px 5px 1px darkgrey;
+  color: lightgrey;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 400ms ease;
+}
+
+button:hover {
+  color: white;
+}
+
+form {
+  border-bottom: 0.1rem solid lightgrey;
+  padding-right: 0.25em;
+  transition: transform 400ms ease;
+}
+
+input[type="search"] {
+  padding: 0.5rem 1rem;
+  color: grey;
+  border: none;
+  max-width: 80%;
+  line-height: 2;
+  font-size: 1rem;
+  transition: color 400ms ease;
+}
+
+input[type="search"]:hover {
+  color: black;
+}
+
+#search-icon {
+  width: 1rem;
+  fill: lightgrey;
+  cursor: pointer;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+
+figure {
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  background: #00000060;
+  color: white;
+  width: 100%;
+  padding: 0.75rem;
+  opacity: 0%;
+  transition: 400ms opacity ease;
+  cursor: pointer;
+  backdrop-filter: blur(0.25rem);
+}
+
+figcaption:hover,
+figcaption:focus {
+  opacity: 100%;
+}
+
+figcaption .title {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+figcaption .engagement {
+  font-size: 0.7rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#bookmark {
+  width: 0.75rem;
+  fill: white;
+  transition: transform 400ms ease;
+}
+
+#bookmark:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: magenta;
+}
+
+footer a:visited {
+  color: hotpink;
+}
+
+footer a:active {
+  color: deeppink;
+}
+
+@media only screen and (max-width: 775px) {
+  main header {
+    justify-content: center;
+  }
+  nav ul {
+    justify-content: center;
+  }
+}
