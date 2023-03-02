@@ -87,3 +87,36 @@ label {
 .reveal {
   transform: translatey(-11rem);
 }
+
+/* credits */
+footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+  color: grey;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  color: magenta;
+}
+
+footer a:visited {
+  color: hotpink;
+}
+
+footer a:active {
+  color: deeppink;
+}
+
+@media only screen and (max-width: 775px) {
+  main header {
+    justify-content: center;
+  }
+  nav ul {
+    justify-content: center;
+  }
+}
