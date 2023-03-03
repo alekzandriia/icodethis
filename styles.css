@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Neon&display=swap");
+
+* {
+  font-family: "Tilt Neon", system-ui, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5vw;
+  box-shadow: 1px 1px 6px #00000040;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  transition: color 400ms ease;
+}
+
+a:hover {
+  color: magenta;
+}
+.list-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.card {
+  max-width: 20rem;
+  max-height: 25rem;
+  box-shadow: 1px 1px 6px #00000040;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 1rem;
+  transition: all 400ms ease;
+  position: relative;
+  gap: 1rem;
+}
+
+.card::before {
+  content: attr(data-index);
+  font-size: 4rem;
+  position: absolute;
+  top: -0.5rem;
+  text-shadow: 2px 2px 0px magenta;
+}
+
+.card h2 {
+  text-align: end;
+  font-size: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.task-list label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: "🔗";
+  margin-right: 0.5rem;
+}
+
+.status {
+  background: pink;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 675px) {
+  .bookmark {
+    width: 100%;
+  }
+}
+
+footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+  color: grey;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  color: magenta;
+}
+
+footer a:visited {
+  color: hotpink;
+}
+
+footer a:active {
+  color: deeppink;
+}
