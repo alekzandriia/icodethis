@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f7;
+  font-family: system-ui;
+}
+
+main {
+  background: white;
+  max-width: 800px;
+  width: 80%;
+  margin: auto;
+  transform: translateY(-20vh);
+  box-shadow: 1px 1px 5px #00000020;
+  margin-top: 2rem;
+}
+
+header {
+  background: #e36a7e;
+  color: white;
+  height: 40vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 100%);
+  padding: 5rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+.pg-title {
+  text-transform: uppercase;
+}
+
+.arrow {
+  fill: white;
+  float: left;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 60%;
+}
+
+.top-ten {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.song {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.song::before {
+  content: attr(data-index);
+  position: absolute;
+  top: 40%;
+  left: -2rem;
+  border: 1px solid lightgrey;
+  padding: 0.5rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.song::after {
+  content: attr(data-plays);
+  float: right;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: grey;
+}
+
+img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  float: left;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+img:hover {
+  filter: invert(100);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 2;
+  padding-top: 0.5rem;
+}
+
+p:hover {
+  color: magenta;
+  cursor: pointer;
+}
+
+.artist {
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 650px) {
+  .pg-title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    padding-left: 2.25rem;
+  }
+  .song::before {
+    font-size: 0.75rem;
+    padding: 0.3rem;
+    left: -1.25rem;
+  }
+  .song::after {
+    font-size: 0.75rem;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pg-title {
+    font-size: 1rem;
+  }
+  header {
+    padding: 6rem 2rem;
+  }
+  .title {
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+}
+
+/* credits */
+footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: magenta;
+}
+
+footer a:visited {
+  color: hotpink;
+}
+
+footer a:active {
+  color: deeppink;
+}
